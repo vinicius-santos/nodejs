@@ -1,7 +1,9 @@
 message = require('../helpers/message');
 const database = require('../database/proof.mongoose');
+var validProof,
+	validProofUpdateDelete = require('../helpers/validation');
 
-exports.all = async function() {
+exports.all = async function(req, res) {
 	try {
 		res.json(await database.all());
 	} catch (err) {
@@ -9,7 +11,7 @@ exports.all = async function() {
 		res.json(response);
 	}
 };
-exports.get = async function(id) {
+exports.get = async function(req, res) {
 	try {
 		res.json(await database.get(req.params.id));
 	} catch (err) {
@@ -17,8 +19,9 @@ exports.get = async function(id) {
 		res.json(response);
 	}
 };
-exports.create = async function(data) {
+exports.create = async function(req, res) {
 	try {
+		validProof(req.body);
 		var result = await database.save(req.body);
 		res.json(result);
 	} catch (error) {
@@ -26,8 +29,9 @@ exports.create = async function(data) {
 		res.json(response);
 	}
 };
-exports.update = async function(id, data) {
+exports.update = async function(req, res) {
 	try {
+		validProofUpdateDelete(req.params.id, req.body);
 		var result = await database.update(req.params.id, req.body);
 		res.json(result);
 	} catch (err) {
@@ -35,9 +39,10 @@ exports.update = async function(id, data) {
 		res.json(response);
 	}
 };
-exports.delete = async function(id) {
+exports.delete = async function(req, res) {
 	try {
-		await database.delete(req.params.id);
+		validProofUpdateDelete(req.params.id, req.body);
+		await database.delete(req.params.id, req.body);
 		var response = `${message('SUCCESS', 'SRE003')}`;
 		res.json(response);
 	} catch (err) {
