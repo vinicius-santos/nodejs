@@ -31,15 +31,17 @@ exports.save = async function(data) {
 };
 
 exports.update = async function(id, data) {
-	Proof.update({ _id: id }, data, { upsert: false }, function(err, data) {
+	var result = await Proof.findOneAndUpdate({ _id: id }, data, { new: true }, function(err, data) {
 		if (err) new Error(err);
 		return data;
 	});
+	return result;
 };
 exports.delete = async function(id, data) {
 	data.active = false;
-	Proof.update({ _id: id }, data, { upsert: false }, function(err, data) {
+	var result = await Proof.findOneAndUpdate({ _id: id }, data, { new: true }, function(err, data) {
 		if (err) new Error(err);
 		return data;
 	});
+	return result;
 };

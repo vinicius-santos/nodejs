@@ -5,11 +5,11 @@ var Proofchema = new mongoose.Schema({
 	questions: [
 		{
 			title: String,
+			weightNote: Number,
 			options: [
 				{
 					text: String,
 					correctAnswer: Boolean,
-					weightNote: Number,
 					chosen: Boolean
 				}
 			]
