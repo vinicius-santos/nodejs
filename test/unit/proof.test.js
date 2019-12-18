@@ -9,14 +9,14 @@ module.exports = {
 
 	/**teste com prova válida */
 	shouldNotReturnError: function(test) {
-		test.strictEqual(valid.validProof(PROOF.PROOF_VALID), true, 'Este teste deve retornar verdadeiro');
+		test.strictEqual(valid.validProofAndAnswer(PROOF.PROOF_VALID, true), true, 'Este teste deve retornar verdadeiro');
 		test.done();
 	},
 	/**teste com  mais de uma opção verdadeira na questão */
 	shouldReturnErrorQuantityTrueAnswers: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_QUANTITY_TRUE_ANSWERS);
+				valid.validProofAndAnswer(PROOF.PROOF_INVALID_QUANTITY_TRUE_ANSWERS, true);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -28,7 +28,7 @@ module.exports = {
 	shouldReturnErrorWeightNote: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_WEIGHT_NOTE);
+				valid.validProofAndAnswer(PROOF.PROOF_INVALID_WEIGHT_NOTE, true);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -40,7 +40,7 @@ module.exports = {
 	shouldReturnErrorQuantityOptions: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_QUANTITY_OPTIONS);
+				valid.validProofAndAnswer(PROOF.PROOF_INVALID_QUANTITY_OPTIONS, true);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -51,7 +51,7 @@ module.exports = {
 	/**teste com prova válida para atualização */
 	shouldNotReturnErrorUpdate: function(test) {
 		test.strictEqual(
-			valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE),
+			valid.validProofAndAnswerUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE, true),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
@@ -61,7 +61,7 @@ module.exports = {
 	/**teste com prova válida para deletar */
 	shouldNotReturnErrorDelete: function(test) {
 		test.strictEqual(
-			valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE),
+			valid.validProofAndAnswerUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE, true),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
@@ -73,7 +73,7 @@ module.exports = {
 		_id = '1234rrrt';
 		test.throws(
 			function() {
-				valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE);
+				valid.validProofAndAnswerUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE, true);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -86,7 +86,7 @@ module.exports = {
 		_id = 'awdrrrrrr';
 		test.throws(
 			function() {
-				valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE);
+				valid.validProofAndAnswerUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE, true);
 			},
 			Error,
 			'Este teste deve retornar erro'

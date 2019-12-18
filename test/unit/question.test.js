@@ -9,14 +9,18 @@ module.exports = {
 
 	/**teste com questão */
 	shouldNotReturnError: function(test) {
-		test.strictEqual(valid.validQuestion(QUESTION.QUESTION_VALID), true, 'Este teste deve retornar verdadeiro');
+		test.strictEqual(
+			valid.validQuestion(QUESTION.QUESTION_VALID, false),
+			true,
+			'Este teste deve retornar verdadeiro'
+		);
 		test.done();
 	},
 	/**teste com  mais de uma opção verdadeira na questão */
 	shouldReturnErrorQuantityTrueAnswers: function(test) {
 		test.throws(
 			function() {
-				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_TRUE_ANSWERS);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_TRUE_ANSWERS, false);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -28,7 +32,7 @@ module.exports = {
 	shouldReturnErrorWeightNote: function(test) {
 		test.throws(
 			function() {
-				valid.validQuestion(QUESTION.QUESTION_INVALID_WEIGHT_NOTE);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_WEIGHT_NOTE, false);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -40,7 +44,7 @@ module.exports = {
 	shouldReturnErrorQuantityOptions: function(test) {
 		test.throws(
 			function() {
-				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_OPTIONS);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_OPTIONS, false);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -51,7 +55,7 @@ module.exports = {
 	/**teste com questão válida para atualização */
 	shouldNotReturnErrorUpdate: function(test) {
 		test.strictEqual(
-			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE),
+			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE, false),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
@@ -61,7 +65,7 @@ module.exports = {
 	/**teste com questão válida para deletar */
 	shouldNotReturnErrorDelete: function(test) {
 		test.strictEqual(
-			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE),
+			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE, false),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
@@ -73,7 +77,7 @@ module.exports = {
 		_id = '1234rrrt';
 		test.throws(
 			function() {
-				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE);
+				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE, false);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -86,7 +90,7 @@ module.exports = {
 		_id = 'awdrrrrrr';
 		test.throws(
 			function() {
-				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE);
+				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE, false);
 			},
 			Error,
 			'Este teste deve retornar erro'
