@@ -3,9 +3,9 @@
       "IRE001": { "status": "INFO", "summary": "", "message": ""}
     },
     "SUCCESS": {
-      "SRE001": { "status": "SUCCESS", "summary": "Proof saved", "message": ""},
-      "SRE002": { "status": "SUCCESS", "summary": "Proof updated", "message": ""},
-      "SRE003": { "status": "SUCCESS", "summary": "Proof removed", "message": ""}
+      "SRE001": { "status": "SUCCESS", "summary": "saved", "message": ""},
+      "SRE002": { "status": "SUCCESS", "summary": "updated", "message": ""},
+      "SRE003": { "status": "SUCCESS", "summary": "removed", "message": ""}
     },
     "WARNNING": {
       "WRE001": { "status": "WARNNING", "summary": "", "message": ""}

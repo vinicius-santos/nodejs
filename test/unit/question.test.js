@@ -1,5 +1,5 @@
 var valid = require('../../api/helpers/validation');
-const PROOF = require('../dataProof');
+const QUESTION = require('../dataQuestion');
 var _id;
 module.exports = {
 	setUp: function(callback) {
@@ -7,16 +7,16 @@ module.exports = {
 		callback();
 	},
 
-	/**teste com prova válida */
+	/**teste com questão */
 	shouldNotReturnError: function(test) {
-		test.strictEqual(valid.validProof(PROOF.PROOF_VALID), true, 'Este teste deve retornar verdadeiro');
+		test.strictEqual(valid.validQuestion(QUESTION.QUESTION_VALID), true, 'Este teste deve retornar verdadeiro');
 		test.done();
 	},
 	/**teste com  mais de uma opção verdadeira na questão */
 	shouldReturnErrorQuantityTrueAnswers: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_QUANTITY_TRUE_ANSWERS);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_TRUE_ANSWERS);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -28,7 +28,7 @@ module.exports = {
 	shouldReturnErrorWeightNote: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_WEIGHT_NOTE);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_WEIGHT_NOTE);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -40,7 +40,7 @@ module.exports = {
 	shouldReturnErrorQuantityOptions: function(test) {
 		test.throws(
 			function() {
-				valid.validProof(PROOF.PROOF_INVALID_QUANTITY_OPTIONS);
+				valid.validQuestion(QUESTION.QUESTION_INVALID_QUANTITY_OPTIONS);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -48,32 +48,32 @@ module.exports = {
 		test.done();
 	},
 
-	/**teste com prova válida para atualização */
+	/**teste com questão válida para atualização */
 	shouldNotReturnErrorUpdate: function(test) {
 		test.strictEqual(
-			valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE),
+			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
 		test.done();
 	},
 
-	/**teste com prova válida para deletar */
+	/**teste com questão válida para deletar */
 	shouldNotReturnErrorDelete: function(test) {
 		test.strictEqual(
-			valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE),
+			valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE),
 			true,
 			'Este teste deve retornar verdadeiro'
 		);
 		test.done();
 	},
 
-	/**teste com prova válida e _id inválido para atualizar */
+	/**teste com questão válida e _id inválido para atualizar */
 	shouldReturnErrorUpdate: function(test) {
 		_id = '1234rrrt';
 		test.throws(
 			function() {
-				valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE);
+				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE);
 			},
 			Error,
 			'Este teste deve retornar erro'
@@ -81,16 +81,17 @@ module.exports = {
 		test.done();
 	},
 
-	/**teste com prova válida e _id inválido para deletar */
+	/**teste com questão válida e _id inválido para deletar */
 	shouldReturnErrorDelete: function(test) {
 		_id = 'awdrrrrrr';
 		test.throws(
 			function() {
-				valid.validProofUpdateDelete(_id, PROOF.PROOF_VALID_UPDATE_AND_DELETE);
+				valid.validQuestionUpdateDelete(_id, QUESTION.QUESTION_VALID_UPDATE_AND_DELETE);
 			},
 			Error,
 			'Este teste deve retornar erro'
 		);
+
 		test.done();
 	}
 };

@@ -1,4 +1,5 @@
-var model = [
+var mongoose = require('mongoose');
+var AnswerSchema = new mongoose.Schema([
 	{
 		name: String,
 		nameUser: String,
@@ -7,15 +8,17 @@ var model = [
 		questions: [
 			{
 				title: String,
+				weightNote: Number,
 				options: [
 					{
 						text: String,
 						correctAnswer: Boolean,
-						weightNote: Number,
 						chosen: Boolean
 					}
 				]
 			}
 		]
 	}
-];
+]);
+
+module.exports = mongoose.model('Answer', AnswerSchema);

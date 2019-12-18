@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Proofchema = new mongoose.Schema({
+var ProofSchema = new mongoose.Schema({
 	name: String,
 	active: Boolean,
 	questions: [
@@ -17,4 +17,4 @@ var Proofchema = new mongoose.Schema({
 	]
 });
 
-module.exports = mongoose.model('Proof', Proofchema);
+module.exports = mongoose.model('Proof', ProofSchema);

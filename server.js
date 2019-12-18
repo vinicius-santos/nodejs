@@ -14,11 +14,11 @@ app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
 	res.setHeader('Access-Control-Allow-Headers', 'content-type');
 	res.setHeader('Content-Type', 'application/json');
-	//res.setHeader('Access-Control-Allow-Credentials', true);
+	res.setHeader('Access-Control-Allow-Credentials', true);
 	next();
 });
 
-var routes = require('./api/routes/proofRoutes');
+var routes = require('./api/routes/routes');
 routes(app);
 
 app.listen(port);

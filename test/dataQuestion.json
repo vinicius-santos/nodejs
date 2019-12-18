@@ -1,0 +1,136 @@
+{
+	"QUESTION_VALID": {
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 100,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": true
+			},
+			{
+				"text": "quarta alternativa",
+				"correctAnswer": false
+			}
+		]
+	},
+
+	"QUESTION_VALID_INTEGRATION": {
+		"_id": "5df97141e4af0631c4781374",
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 100,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": true
+			},
+			{
+				"text": "quarta alternativa",
+				"correctAnswer": false
+			}
+		]
+	},
+	"QUESTION_INVALID_QUANTITY_TRUE_ANSWERS": {
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 100,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": true
+			},
+			{
+				"text": "quarta alternativa",
+				"correctAnswer": true
+			}
+		]
+	},
+
+	"QUESTION_INVALID_WEIGHT_NOTE": {
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 10,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "quarta alternativa",
+				"correctAnswer": true
+			}
+		]
+	},
+
+	"QUESTION_INVALID_QUANTITY_OPTIONS": {
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 100,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": false
+			}
+		]
+	},
+
+	"QUESTION_VALID_UPDATE_AND_DELETE": {
+		"_id": "22wefggghhhhhhjjjxsdfrrfrg",
+		"title": " 1 questão qual questão abaixo esta correta?",
+		"weightNote": 100,
+		"options": [
+			{
+				"text": "primeira alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "segunda alternativa",
+				"correctAnswer": false
+			},
+			{
+				"text": "terceira alternativa",
+				"correctAnswer": true
+			},
+			{
+				"text": "quarta alternativa",
+				"correctAnswer": false
+			}
+		]
+	}
+}
