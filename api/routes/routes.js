@@ -3,6 +3,7 @@ module.exports = function(app) {
 	var proof = require('../controllers/proofController');
 	var question = require('../controllers/questionController');
 	var answer = require('../controllers/answerController');
+	var user = require('../controllers/userController');
 
 	app.route('/proofs').get(proof.all).post(proof.create);
 	app.route('/proofs/:id').get(proof.get).put(proof.update).delete(proof.delete);
@@ -12,4 +13,7 @@ module.exports = function(app) {
 
 	app.route('/answers').get(answer.all).post(answer.create);
 	app.route('/answers/:id').get(answer.get).put(answer.update).delete(answer.delete);
+
+	app.route('/users').get(user.all).post(user.create);
+	app.route('/users/:id').get(user.get).put(user.update);
 };

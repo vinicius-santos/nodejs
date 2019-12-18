@@ -1,0 +1,33 @@
+{
+	"USER_VALID": {
+		"name": "vinicius",
+		"email": "vinicius}_bauer@hotmail.com",
+		"password": "1234567"
+	},
+
+	"USER_INVALID": {
+		"name": "vinicius",
+		"email": "vinicius}_bauer@hotmail.com",
+		"password": null
+	},
+	"USER_VALID_INTEGRATION": {
+		"_id": "5df97141e4af0631c4781374",
+		"name": "vinicius",
+		"email": "vinicius}_bauer@hotmail.com",
+		"password": "1234567"
+	},
+
+	"USER_VALID_UPDATE": {
+		"_id": "222355efggghhhhhhjjjxsdfrrfrg",
+		"name": "vinicius",
+		"email": "vinicius}_bauer@hotmail.com",
+		"password": "1234567"
+	},
+
+	"USER_INVALID_UPDATE": {
+		"_id": "222355efggghhhhhhjjjxsdfrrfrg",
+		"name": "vinicius",
+		"email": "vinicius}_bauer@hotmail.com",
+		"password": ""
+	}
+}

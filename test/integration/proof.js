@@ -15,7 +15,7 @@ describe('Proof - Endpoints', () => {
 				res.should.be.json;
 				done();
 			});
-		});
+		}).timeout(5000);
 	});
 
 	/* id deve ser o mesmo do objeto que será atualizado*/
@@ -31,7 +31,7 @@ describe('Proof - Endpoints', () => {
 					res.should.be.json;
 					done();
 				});
-		});
+		}).timeout(5000);
 	});
 
 	/* id deve ser o mesmo do objeto que será removido, no caso desativado*/
@@ -47,6 +47,6 @@ describe('Proof - Endpoints', () => {
 					res.should.be.json;
 					done();
 				});
-		});
+		}).timeout(5000);
 	});
 });

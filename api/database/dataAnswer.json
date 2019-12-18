@@ -1,0 +1,175 @@
+{
+	"ANSWER_VALID": {
+		"name": "prova de quimica",
+		"active": true,
+		"nameUser": "Vinicius",
+		"finalGrade": 0,
+		"questions": [
+			{
+				"title": " 1 questão qual questão abaixo esta correta?",
+				"weightNote": 80,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": false
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": true
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false
+					}
+				]
+			},
+			{
+				"title": "2 questão qual questão abaixo esta correta?",
+				"weightNote": 20,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": true
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": false
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false
+					}
+				]
+			}
+		]
+	},
+
+	"ANSWER_INVALID": {
+		"name": "prova de quimica",
+		"active": true,
+		"nameUser": "Vinicius",
+		"finalGrade": 0,
+		"questions": [
+			{
+				"title": " 1 questão qual questão abaixo esta correta?",
+				"weightNote": -80,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": true,
+						"chosen": true
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					}
+				]
+			},
+			{
+				"title": "2 questão qual questão abaixo esta correta?",
+				"weightNote": 10,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": true,
+						"chosen": true
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					}
+				]
+			}
+		]
+	},
+	"ANSWER_VALID_INTEGRATION": {
+		"name": "prova de quimica",
+		"nameUser": "Vinicius",
+		"finalGrade": 0,
+		"active": true,
+		"questions": [
+			{
+				"title": " 1 questão qual questão abaixo esta correta?",
+				"weightNote": 80,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": true,
+						"chosen": true
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					}
+				]
+			},
+			{
+				"title": "2 questão qual questão abaixo esta correta?",
+				"weightNote": 20,
+				"options": [
+					{
+						"text": "primeira alternativa",
+						"correctAnswer": true,
+						"chosen": false
+					},
+					{
+						"text": "segunda alternativa",
+						"correctAnswer": false,
+						"chosen": true
+					},
+					{
+						"text": "terceira alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					},
+					{
+						"text": "quarta alternativa",
+						"correctAnswer": false,
+						"chosen": false
+					}
+				]
+			}
+		]
+	}
+}

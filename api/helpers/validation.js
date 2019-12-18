@@ -62,3 +62,16 @@ exports.validQuestionUpdateDelete = function(id, question) {
 	if (id !== question._id) throw new Error();
 	return true;
 };
+
+exports.validUser = function(item) {
+	if (!item.name || !item.email || !item.password) throw new Error();
+	return true;
+};
+
+exports.validUserUpdateDelete = function(id, item) {
+	this.validUser(item);
+	if (!item._id) throw new Error();
+	if (!id) throw new Error();
+	if (id !== item._id) throw new Error();
+	return true;
+};

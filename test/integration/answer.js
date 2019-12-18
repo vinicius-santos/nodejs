@@ -15,6 +15,6 @@ describe('Answer - Endpoints', () => {
 				res.should.be.json;
 				done();
 			});
-		});
+		}).timeout(5000);
 	});
 });
